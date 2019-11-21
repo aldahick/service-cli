@@ -1,0 +1,36 @@
+{
+  "name": "@aldahick/service-cli",
+  "version": "0.1.0",
+  "author": "Alex Hicks <alex@alexhicks.net> (https://alexhicks.net)",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "service-cli": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc -p .",
+    "lint": "eslint . --ext .ts",
+    "prepublishOnly": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aldahick/service-cli"
+  },
+  "files": [
+    "dist",
+    "src",
+    "template",
+    "*.*"
+  ],
+  "dependencies": {
+    "fs-extra": "8.1.0",
+    "recursive-copy": "2.0.10"
+  },
+  "devDependencies": {
+    "@aldahick/eslint-rules": "0.1.0",
+    "@types/fs-extra": "8.0.1",
+    "@types/node": "12.12.11",
+    "@types/source-map-support": "0.5.0",
+    "typescript": "3.7.2"
+  }
+}
